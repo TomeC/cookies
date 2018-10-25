@@ -1,0 +1,6 @@
+#!/bin/bash
+#echo "$PWD"
+git status
+echo -n "enter commits: "
+read note
+git commit -a -m $note
