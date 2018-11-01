@@ -1,6 +1,13 @@
 #!/bin/bash
-#echo "$PWD"
 git status
 echo -n "enter commits: "
 read note
-git commit -a -m $note
+git add .
+git commit -m $note
+git push
+status=`echo $?`
+if [[ $status -eq 0 ]]; then
+    echo '------- push success ------'
+else
+    echo '------ push failed ------'
+fi
