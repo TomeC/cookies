@@ -1,0 +1,6 @@
+#!/bin/bash
+echo $1, $2, $3
+r=`echo "obase=16;$1"|bc`
+g=`echo "obase=16;$2"|bc`
+b=`echo "obase=16;$3"|bc`
+echo "#${r}$g$b"
